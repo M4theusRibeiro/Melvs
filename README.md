@@ -1,1 +1,1 @@
-# sprint
+# Projeto do primeiro semestre SPTECH
