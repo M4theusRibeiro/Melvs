@@ -7,6 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Simule</h1>
+    <p>Insira a quantidade de grãos armazenados:</p> <br>
+    <input type="number" id="input_qtdGraos">
+    <button onclick="calcularPerda()">Simular</button>
+    <div id="div_mostrarResultado"></div>
 </body>
 </html>
+<script>
+    function calcularPerda(){
+        var perda30Dias = (Number(input_qtdGraos.value) * 0.3).toFixed(0)
+        var perda60Dias = (Number(input_qtdGraos.value) * 0.6).toFixed(0)
+        var perda90Dias = (Number(input_qtdGraos.value) * 1).toFixed(0)
+        div_mostrarResultado.innerHTML = `
+        Sem melvis: <br>
+        Em 30 dias você perderá <b>${perda30Dias} dos seus grãos (33%).</b> <br>
+        Em 60 dias você perderá <b>${perda60Dias} dos seus grãos (66%).</b> <br>
+        Em 90 dia você perderá <b>${perda90Dias} dos seus grãos (100%).</b> <br>
+        <br>
+        Com melvis: <br>
+        Em 30 dias você perderá 0 grãos. <br>
+        Em 60 dias você perderá 0 grãos. <br>
+        Em 90 dias você perderá 0 grãos. <br>
+        Em +180 os seus grão permaceram dentro do padrão básico de mercialização.  
+        `
+    }
+</script>
