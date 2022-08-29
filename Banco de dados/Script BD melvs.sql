@@ -6,16 +6,17 @@ id int primary key auto_increment,
 Nome_responsável varchar(30) not null, 
 Nome_empresa varchar(30) not null, 
 CNPJ varchar (18) not null, 
-Email varchar (30), constraint chkemail check(Email like '%@%'), 
+Email varchar (30), constraint chkemail check(Email like '%@%'),
+Senha varchar (30),
 Estado_Cidade varchar (45) not null, 
 Endereço varchar(255) default 'Endereço' 
 ); 
 select * from cadastro; 
-insert into cadastro (nome_responsável, nome_empresa, CNPJ, Email, Estado_Cidade, Endereço) values 
-('Gilberto', 'Sojeando', '12.345.678/1234-12', 'gilberto.sojeando@uol.com', 'MG / Uberlândia', default),
-('Vivian', 'Vivando', '98.765.432/1342-13', 'vivian.vivando@gmail.com', 'GO / Goiânia', 'R. Marinho Gomes N° 123'),
-('Cleber', 'Soja Sempre', '56.677.834/4321-45', 'clebinho.souza@sojasempre.com', 'GO / Goiânia', default),
-('Ashley', 'Farm Soya', '52.555.968/9841-35', 'ashley.smith@farmsoya.com', 'MT / Sorriso', default);
+insert into cadastro (nome_responsável, nome_empresa, CNPJ, Email, Senha, Estado_Cidade, Endereço) values 
+('Gilberto', 'Sojeando', '12.345.678/1234-12', 'gilberto.sojeando@uol.com', '#Gf123456', 'MG / Uberlândia', default),
+('Vivian', 'Vivando', '98.765.432/1342-13', 'vivian.vivando@gmail.com', '#Vi9876', 'GO / Goiânia', 'R. Marinho Gomes N° 123'),
+('Cleber', 'Soja Sempre', '56.677.834/4321-45', 'clebinho.souza@sojasempre.com', 'Cleber@2004', 'GO / Goiânia', default),
+('Ashley', 'Farm Soya', '52.555.968/9841-35', 'ashley.smith@farmsoya.com', 'Ash!19012016','MT / Sorriso', default);
 
  ----------------------------------------------------------------------------------------------------------------------------------------- 
 
