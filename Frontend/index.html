@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
     <title>Melvs</title>
     <style>
         *{
-            font-family: sans-serif;
+            font-family: 'Inder', sans-serif;
+        }
+
+        body{
+            display: flex;
+        }
+
+        .calculadora{
+            width: 50%;
+        }
+
+        .explicacaoCalculo{
+            width: 50%;
         }
 
         .verde{
@@ -17,26 +32,39 @@
         .vermelho{
             color: red;
         }
+
+        
     </style>
 </head>
 <body>
-    <h1 class="verde">Simule</h1>
-    <p>Insira a quantidade de grãos armazenados:</p> <br>
-    <input type="number" id="input_qtdGraos">
-    <button onclick="calcularPerda()">Simular</button>
-    <div id="div_mostrarResultado"></div>
+    <div class="calculadora">
+        <h1 class="verde">Simule</h1>
+        <p>Insira a quantidade de quilos(kg) de soja armazenados:</p> <br>
+        <input type="number" id="input_qtdGraos">
+        <button onclick="calcularPerda()">Simular</button>
+        <div id="div_mostrarResultado"></div>
+    </div>
+
+    <div class="explicacaoCalculo">
+       <p>
+        Pesquisas demonstram que sem o controle de temperatura no armazenamento de soja, fazem com que ela em condições de 15% de umidade e 35ºC durem até <b class="vermelho">90 dias</b> fazendo com que as sojas saiam do padrão de comercialização, constanto presença de mofo e bolor a olho nú.
+       </p>
+       <p>
+        Através dessas informações fizemos um simulador para mostrar a diferença com e sem a nossa solução comparando-os.
+       </p>
+    </div>
 </body>
 </html>
 <script>
     function calcularPerda(){
-        var perda30Dias = (Number(input_qtdGraos.value) * 0.3).toFixed(0)
-        var perda60Dias = (Number(input_qtdGraos.value) * 0.6).toFixed(0)
-        var perda90Dias = (Number(input_qtdGraos.value) * 1).toFixed(0)
+        var perda30Dias = (Number(input_qtdGraos.value) * 0.3).toFixed(1)
+        var perda60Dias = (Number(input_qtdGraos.value) * 0.6).toFixed(1)
+        var perda90Dias = (Number(input_qtdGraos.value) * 1).toFixed(1)
         div_mostrarResultado.innerHTML = `
         Sem melvs: <br>
-        Em 30 dias você perderá <b class= "vermelho">${perda30Dias} dos seus grãos (33%).</b> <br>
-        Em 60 dias você perderá <b class= "vermelho">${perda60Dias} dos seus grãos (66%).</b> <br>
-        Em 90 dias você perderá <b class= "vermelho">${perda90Dias} dos seus grãos (100%).</b> <br>
+        Em 30 dias você perderá <b class= "vermelho">${perda30Dias}kg de soja (33%).</b> <br>
+        Em 60 dias você perderá <b class= "vermelho">${perda60Dias}kg de soja (66%).</b> <br>
+        Em 90 dias você perderá <b class= "vermelho">${perda90Dias}kg de soja (100%).</b> <br>
         <br>
         Com melvs: <br>
         Em 30 dias você perderá <span class = "verde">0 grãos.</span> <br>
