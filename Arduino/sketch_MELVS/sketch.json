@@ -1,0 +1,9 @@
+{
+  "cpu": {
+    "fqbn": "arduino:avr:unomini",
+    "name": "Arduino Uno Mini",
+    "type": "serial"
+  },
+  "secrets": [],
+  "included_libs": []
+}
