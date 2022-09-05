@@ -1,1 +1,4 @@
-# Projeto do primeiro semestre SPTECH
+![thumbnail_logo](https://user-images.githubusercontent.com/110927471/188475747-2ba581d2-8177-4971-af21-61233e8a66c3.png)
+<h1>Projeto da primeira sprint sptech<h1>
+
+<p>O nosso projeto consiste no controle de temperatura e umidade na armazenagem de soja nos silos, e para fazer isso desenvolvemos uma solução usando através do sensor DHT11 para captar a temperatura e a umidade dentro dos silos. Com esses dados captados, gerenciamos o silo da forma correta para que não ocorram perdas consideráveis de sojas contaminadas e consequentemente afetando os lucros da empresa. Desenvolvemos um site institucional que nele contém um simulador financeiro para os nossos clientes calcularem os seus números após a utilização dos nossos serviços, além de explicar como o processo de armazenamento correto da soja funciona.</p>
