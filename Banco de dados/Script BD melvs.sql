@@ -7,7 +7,7 @@ Nome_responsável varchar(30) not null,
 Nome_empresa varchar(30) not null, 
 CNPJ varchar (18) not null, 
 Email varchar (30), constraint chkemail check(Email like '%@%'),
-Senha varchar (30),
+Senha varchar (30) not null,
 Estado_Cidade varchar (45) not null, 
 Endereço varchar(255) default 'Endereço' 
 ); 
