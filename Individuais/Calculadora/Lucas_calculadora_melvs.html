@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Calculadora Melvs</title>
+</head>
+<body>
+    <div class="calculadora">
+        <span>Insira a quantidade de soja armazenados (em quilos): </span>
+        <input id="input_qtd_graos">
+        <button onclick="calcular()">Simular</button>
+        <div id="div_resultado"></div>
+    </div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var perda60Dias = (Number(input_qtd_graos.value) * 0.666)
+        var perda30Dias = (Number(input_qtd_graos.value) * 0.333)
+        var perda90Dias = (Number(input_qtd_graos.value) * 1)
+        
+        div_resultado.innerHTML = 
+        `
+        Sem melvs: <br>
+        Em 30 dias você perderá ${perda30Dias}kg de soja (33%).<br>
+        Em 60 dias você perderá ${perda60Dias}kg de soja (66%).<br>
+        Em 90 dias você perderá ${perda90Dias}kg de soja (100%). <br>
+        <br>
+        Com melvs: <br>
+        Em 30 dias você perderá <span class = "verde">0 grãos.</span> <br>
+        Em 60 dias você perderá <span class = "verde">0 grãos.</span> <br>
+        Em 90 dias você perderá <span class = "verde">0 grãos.</span> <br>
+        Em +180 dias os seus grãos permanecerão dentro do padrão básico de comercialização.  
+        `
+    }
+</script>
