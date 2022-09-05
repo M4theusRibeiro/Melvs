@@ -57,14 +57,14 @@
 </html>
 <script>
     function calcularPerda(){
-        var perda30Dias = Number(input_qtdGraos.value) * 0.3
-        var perda60Dias = Number(input_qtdGraos.value) * 0.6
-        var perda90Dias = Number(input_qtdGraos.value) * 1
+        var perda30Dias = (Number(input_qtdGraos.value) * 0.3).toFixed(1)
+        var perda60Dias = (Number(input_qtdGraos.value) * 0.6).toFixed(1)
+        var perda90Dias = (Number(input_qtdGraos.value) * 1).toFixed(1)
         div_mostrarResultado.innerHTML = `
         Sem melvs: <br>
-        Em 30 dias você perderá <b class= "vermelho">${(perda30Dias).toFixed(1)}kg de soja (33%).</b> <br>
-        Em 60 dias você perderá <b class= "vermelho">${(perda60Dias).toFixed(1)}kg de soja (66%).</b> <br>
-        Em 90 dias você perderá <b class= "vermelho">${(perda90Dias).toFixed(1)}kg de soja (100%).</b> <br>
+        Em 30 dias você perderá <b class= "vermelho">${perda30Dias}kg de soja (33%).</b> <br>
+        Em 60 dias você perderá <b class= "vermelho">${perda60Dias}kg de soja (66%).</b> <br>
+        Em 90 dias você perderá <b class= "vermelho">${perda90Dias}kg de soja (100%).</b> <br>
         <br>
         Com melvs: <br>
         Em 30 dias você perderá <span class = "verde">0 grãos.</span> <br>
