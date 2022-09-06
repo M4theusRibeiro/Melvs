@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Melvs</title>
+  </head>
+  <body>
+    Quantidade de grãos de soja armazenado: <input id="qtdGraos" type="text" />
+    <button onclick="calcular()">Faça sua simulação</button>
+
+    <div id="mostrar_resultado"></div>
+  </body>
+</html>
+
+<script>
+  function calcular() {
+    var total = Number(qtdGraos.value)
+    var graos_10porcento = total * 0.15
+    var graos_90porcento = total - graos_10porcento
+    var valor_saca = 150
+
+    var pesoMilGraos_GRAMAS = (graos_90porcento * 170) / 1000
+    var pesoEmKG = pesoMilGraos_GRAMAS / 1000
+
+    var sacas = pesoEmKG / 60
+    var valor_saca = sacas * 150
+
+    mostrar_resultado.innerHTML = `
+        <br>Com a quantidade de ${total} grãos, você tem um prejúizo de até 15%, resultante em ${graos_10porcento} grãos, você perde ${sacas.toFixed(
+      0
+    )} sacas, que equivale R$${valor_saca.toFixed(0)}
+        <p>Adquirindo os serviços da Melvs você terá um monitoramento constante do silo que reduzirá este prejúzo!!
+        `
+  }
+</script>
