@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MELVS</title>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Simule agora</h1>
+        <p>Digite quantos quilos(kg) de soja você tem armazenados:</p> <br>
+        <input id="qtdGraos">
+        <button onclick="calcular()">Simular agora</button>
+        <div id="resultado"></div>
+    </div>
+
+    <div class="pesquisa">
+       <p>
+        Pesquisas demonstram que sem o controle de temperatura no armazenamento de soja, fazem com que ela em condições de 15% de umidade e 35ºC durem até <b class="vermelho">90 dias</b> fazendo com que as sojas saiam do padrão de comercialização, constanto presença de mofo e bolor a olho nú.
+       </p>
+       <p>
+        Através dessas informações fizemos um simulador para mostrar a diferença com e sem a nossa solução comparando-os.
+       </p>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var graos = Number(qtdGraos.value);
+        var trintaDias = (graos * 0.3).toFixed(1);
+        var sessentaDias = (graos * 0.6).toFixed(1);
+        var noventaDias = (graos * 1.0).toFixed(1);
+
+        resultado.innerHTML = `
+        Sem melvs: <br>
+        Em 30 dias você perderá ${trintaDias}kg de soja.</b> <br>
+        Em 60 dias você perderá ${sessentaDias}kg de soja.</b> <br>
+        Em 90 dias você perderá ${noventaDias}kg de soja.</b> <br>
+        <br>
+        Com melvs: <br>
+        <u><i><b>Os seus grãos permanecerão dentro do padrão básico de comercialização durante um periodo maior que 180 dias.</b></i></u>  
+        `
+    }
+</script>
